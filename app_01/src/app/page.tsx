@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -9,6 +9,9 @@ export default function Home() {
        >
         HomePage
       </h1>
+      <Link href='/blog'>Blogs</Link>
+      <Link href='/articles/breaking-news-121?lang=en'>Read in English</Link>
+      <Link href='/articles/breaking-news-121?lang=es'>Read in Spanish</Link>
     </div>
   );
 }
