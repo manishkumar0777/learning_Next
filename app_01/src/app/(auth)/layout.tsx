@@ -2,6 +2,7 @@
 import '../globals.css'
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState } from 'react'
 
 export default function authLayout(
     { children }: { children: React.ReactNode }
@@ -12,10 +13,19 @@ export default function authLayout(
         { name: 'register', href: '/register' }
     ]
 
+    //state
+    const [input, setInput] = useState("");
+
 
     return (
         <div>
             <div className='flex flex-row items-center'>
+                <input 
+                   className='border border-gray-500 mx-4'
+                   value= {input}
+                   onChange= {(e) => setInput(e.target.value)}
+                />
+
                 {navlinks.map((navlink) => {
 
                     const isActive = pathName === navlink.href || pathName.startsWith(navlink.href) && navlink.href !== '/';
