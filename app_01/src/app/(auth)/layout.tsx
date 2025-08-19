@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from 'react'
 
-export default function authLayout(
+export default function AuthLayout(
     { children }: { children: React.ReactNode }
 ) {
     const pathName = usePathname();

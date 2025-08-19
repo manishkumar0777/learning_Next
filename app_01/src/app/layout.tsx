@@ -1,9 +1,11 @@
 import { Metadata } from "next";
+import './globals.css'
 import Header from './components/Header'
+import ErrorWrapper from "./error-wrapper";
 
 
 export const metadata: Metadata = {
-  title : {
+  title: {
     default: "Next.js App",
     template: "%s | Manish",
   },
@@ -20,7 +22,7 @@ export default function RootLayout({
 
       <body>
         <Header />
-        {children}
+        <ErrorWrapper>{children}</ErrorWrapper> 
         <footer style={{ background: "ghostwhite", padding: '1rem' }}>
           <p>Footer</p>
         </footer>
