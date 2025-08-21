@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>
+    <div className='w-full'>
       <h1 className='text-3xl font-bold
        text-center text-red-500 items-center 
        justify-center'

@@ -17,7 +17,7 @@ const ErrorSimulator = ({ message = "this is an error", }: { message?: string })
             <button
                 onClick={() => setError(prev => !prev)}
                 title='simulate an error'
-                className='bg-red-950 hover:bg-red-800 hover:scale-105 transiton text-white font-extrabold'
+                className='bg-red-950 hover:bg-red-800 hover:scale-105 transiton-all text-white font-extrabold'
             >
                 simulate Error
             </button>

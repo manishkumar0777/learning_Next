@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body>
+      <body className="w-full">
         <Header />
-        <ErrorWrapper>{children}</ErrorWrapper> 
-        <footer style={{ background: "ghostwhite", padding: '1rem' }}>
+        {children}
+        <footer className="bottom-0 absolute" style={{ background: "ghostwhite", padding: '1rem' }}>
           <p>Footer</p>
         </footer>
       </body>
