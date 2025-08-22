@@ -8,6 +8,7 @@ const Home = () => {
                    flex p-6 items-center justify-center"
     >
       <div className="text-center">
+        <h1 className="text-9xl font-extrabold transform transition-all ease-in-out duration-200 hover:scale-105 mb-2 text-gray-200">WELCOME</h1>
         <h1 className="text-5xl font-bold text-gray-100 mb-6">Welcome to the Dashboard app</h1>
         <p className="text-lg text-gray-200 mb-6">
           Manage you tasks , trace analytics , stay organised with our powerful dashBoard
