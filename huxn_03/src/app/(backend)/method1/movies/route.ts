@@ -1,15 +1,6 @@
-// export async function GET() {
-//     return new Response('Hello from http')
-    
-// }
-
-//data
 import { movies } from "@/data/moviesData";
- 
+import { NextRequest } from "next/server";
 
-export const GET = async () => {
-    return Response.json(movies)
-}
 
 export const POST = async (req : Request) => {
     let movie = await req.json();
@@ -17,4 +8,13 @@ export const POST = async (req : Request) => {
     const newMovie = {...movie};
     movies.push(newMovie);
     return new Response(JSON.stringify(newMovie));
+}
+
+export const GET = async (req : NextRequest) => {
+    const searchParams =  req.nextUrl.searchParams;
+    const query = searchParams.get('query');
+
+    const filteredMovies = query ? movies.filter(m => m.name.toLowerCase().includes(query)) : movies;
+    
+    return new Response(JSON.stringify(filteredMovies), {status : 200})
 }
